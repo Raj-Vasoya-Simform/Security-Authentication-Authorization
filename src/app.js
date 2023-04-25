@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const helmet = require("helmet");
-// const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const MongoDBSession = require("connect-mongodb-session")(session);
 
@@ -33,7 +32,6 @@ app.use(
 );
 app.use(cors());
 app.use(helmet());
-// app.use(cookieParser());
 app.use("/notes", noteRouter);
 app.use("/user", userRouter);
 
